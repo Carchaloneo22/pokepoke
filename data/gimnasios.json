@@ -1,0 +1,8 @@
+{
+  "gimnasios": [
+    { "id": "fuego", "nombre": "Horno Rojo", "tipo": "Fuego", "lider": "Mara", "equipo": ["Torchic", "Vulpix", "Growlithe"], "trofeo": { "id": "especia_ahumada", "nombre": "Especia ahumada" } },
+    { "id": "agua", "nombre": "Muelle Azul", "tipo": "Agua", "lider": "Nilo", "equipo": ["Mudkip", "Squirtle", "Psyduck"], "trofeo": { "id": "sal_marina", "nombre": "Sal marina" } },
+    { "id": "planta", "nombre": "Invernadero Vivo", "tipo": "Planta", "lider": "Vera", "equipo": ["Treecko", "Bulbasaur", "Oddish"], "trofeo": { "id": "hierbas_frescas", "nombre": "Hierbas frescas" } },
+    { "id": "electrico", "nombre": "Torre del Pulso", "tipo": "Eléctrico", "lider": "Ciro", "equipo": ["Pikachu", "Voltorb", "Magnemite"], "trofeo": { "id": "chispa_en_polvo", "nombre": "Chispa en polvo" } }
+  ]
+}

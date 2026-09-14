@@ -1,0 +1,17 @@
+{
+  "movimientos": [
+    { "id": "ramita", "nombre": "Ramita", "tipo": "Planta", "categoria": "especial", "poder": 35 },
+    { "id": "pulso_verde", "nombre": "Pulso verde", "tipo": "Planta", "categoria": "especial", "poder": 45 },
+    { "id": "mordida_calida", "nombre": "Mordida calida", "tipo": "Fuego", "categoria": "especial", "poder": 40 },
+    { "id": "chisporroteo", "nombre": "Chisporroteo", "tipo": "Fuego", "categoria": "especial", "poder": 50 },
+    { "id": "chorro", "nombre": "Chorro", "tipo": "Agua", "categoria": "especial", "poder": 45 },
+    { "id": "burbuja", "nombre": "Burbuja", "tipo": "Agua", "categoria": "estado", "poder": 0 },
+    { "id": "chispa_corta", "nombre": "Chispa corta", "tipo": "Eléctrico", "categoria": "especial", "poder": 50 },
+    { "id": "aleteo", "nombre": "Aleteo", "tipo": "Volador", "categoria": "fisico", "poder": 40 },
+    { "id": "golpe_roca", "nombre": "Golpe roca", "tipo": "Roca", "categoria": "fisico", "poder": 55 },
+    { "id": "embate", "nombre": "Embate", "tipo": "Tierra", "categoria": "fisico", "poder": 45 },
+    { "id": "destello", "nombre": "Destello", "tipo": "Psíquico", "categoria": "especial", "poder": 55 },
+    { "id": "onda_clara", "nombre": "Onda clara", "tipo": "Psíquico", "categoria": "estado", "poder": 0 },
+    { "id": "guardia", "nombre": "Guardia", "tipo": "Normal", "categoria": "estado", "poder": 0 }
+  ]
+}

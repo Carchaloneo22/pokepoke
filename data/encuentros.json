@@ -1,0 +1,12 @@
+{
+  "zonas": {
+    "ruta_verde": {
+      "probabilidadPorPaso": 0.12,
+      "criaturas": [{ "id": "Treecko", "peso": 45 }, { "id": "Torchic", "peso": 30 }, { "id": "Mudkip", "peso": 25 }]
+    },
+    "sendero_rocoso": {
+      "probabilidadPorPaso": 0.14,
+      "criaturas": [{ "id": "Geodude", "peso": 60 }, { "id": "Pikachu", "peso": 40 }]
+    }
+  }
+}

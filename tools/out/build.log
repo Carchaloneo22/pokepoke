@@ -1,0 +1,327 @@
+﻿Zones: 72 dict_values(['petalburg_city', 'slateport_city', 'mauville_city', 'rustboro_city', 'fortree_city', 'lilycove_city', 'mossdeep_city', 'ever_grande_city', 'littleroot_town', 'oldale_town', 'dewford_town', 'lavaridge_town', 'fallarbor_town', 'verdanturf_town', 'pacifidlog_town', 'route_101', 'route_102', 'route_103', 'route_104', 'route_105', 'route_106', 'route_107', 'route_108', 'route_109', 'route_110', 'route_111', 'route_112', 'route_113', 'route_114', 'route_115', 'route_116', 'route_117', 'route_118', 'route_119', 'route_120', 'route_121', 'route_122', 'route_123', 'route_124', 'route_125', 'route_126', 'route_127', 'route_128', 'route_129', 'route_130', 'route_131', 'route_132', 'route_133', 'route_134', 'underwater_55', 'underwater_50', 'underwater_56', 'underwater', 'underwater_52', 'underwater_53', 'underwater_54', 'sootopolis_city', 'petalburg_woods', 'rusturf_tunnel', 'granite_cave', 'meteor_falls', 'fiery_path', 'jagged_pass', 'mt_chimney', 'mt_pyre', 'new_mauville', 'safari_zone', 'shoal_cave', 'victory_road', 'abandoned_ship', 'aqua_hideout', 'magma_hideout'])
+ zone petalburg_city idx=0 size 30 x 30 exits 8 spawn (248, 248)
+ zone slateport_city idx=1 size 40 x 60 exits 14 spawn (328, 488)
+ zone mauville_city idx=2 size 40 x 20 exits 11 spawn (328, 168)
+ zone rustboro_city idx=3 size 40 x 60 exits 15 spawn (328, 488)
+ zone fortree_city idx=4 size 40 x 20 exits 11 spawn (312, 184)
+ zone lilycove_city idx=5 size 80 x 40 exits 16 spawn (648, 328)
+ zone mossdeep_city idx=6 size 80 x 40 exits 13 spawn (648, 328)
+ zone ever_grande_city idx=8 size 40 x 80 exits 5 spawn (296, 664)
+ zone littleroot_town idx=9 size 20 x 20 exits 4 spawn (168, 168)
+ zone oldale_town idx=10 size 20 x 20 exits 7 spawn (168, 168)
+ zone dewford_town idx=11 size 20 x 20 exits 7 spawn (152, 152)
+ zone lavaridge_town idx=12 size 20 x 20 exits 7 spawn (168, 168)
+ zone fallarbor_town idx=13 size 20 x 20 exits 7 spawn (168, 168)
+ zone verdanturf_town idx=14 size 20 x 20 exits 9 spawn (168, 168)
+ zone pacifidlog_town idx=15 size 20 x 40 exits 8 spawn (136, 296)
+ zone route_101 idx=16 size 20 x 20 exits 2 spawn (168, 168)
+ zone route_102 idx=17 size 50 x 20 exits 2 spawn (408, 168)
+ zone route_103 idx=18 size 80 x 22 exits 3 spawn (712, 120)
+ zone route_104 idx=19 size 40 x 80 exits 11 spawn (344, 664)
+ zone route_105 idx=20 size 40 x 80 exits 3 spawn (248, 680)
+ zone route_106 idx=21 size 80 x 20 exits 3 spawn (664, 184)
+ zone route_107 idx=22 size 60 x 20 exits 2 spawn (488, 248)
+ zone route_108 idx=23 size 60 x 20 exits 3 spawn (472, 104)
+ zone route_109 idx=24 size 40 x 63 exits 3 spawn (408, 488)
+ zone route_110 idx=25 size 40 x 100 exits 9 spawn (312, 824)
+ zone route_111 idx=26 size 40 x 140 exits 8 spawn (344, 1112)
+ zone route_112 idx=27 size 40 x 60 exits 9 spawn (312, 472)
+ zone route_113 idx=28 size 100 x 20 exits 6 spawn (808, 168)
+ zone route_114 idx=29 size 40 x 80 exits 7 spawn (328, 648)
+ zone route_115 idx=30 size 40 x 80 exits 5 spawn (296, 664)
+ zone route_116 idx=31 size 100 x 20 exits 7 spawn (792, 152)
+ zone route_117 idx=32 size 60 x 20 exits 3 spawn (488, 168)
+ zone route_118 idx=33 size 80 x 20 exits 5 spawn (648, 168)
+ zone route_119 idx=34 size 40 x 140 exits 3 spawn (328, 1192)
+ zone route_120 idx=35 size 40 x 100 exits 4 spawn (328, 808)
+ zone route_121 idx=36 size 80 x 20 exits 4 spawn (648, 168)
+ zone route_122 idx=37 size 40 x 40 exits 3 spawn (360, 472)
+ zone route_123 idx=38 size 140 x 20 exits 3 spawn (1112, 152)
+ zone route_124 idx=39 size 80 x 80 exits 4 spawn (536, 760)
+ zone route_125 idx=40 size 80 x 40 exits 3 spawn (728, 280)
+ zone route_126 idx=41 size 80 x 80 exits 2 spawn (616, 648)
+ zone route_127 idx=42 size 80 x 80 exits 3 spawn (696, 584)
+ zone route_128 idx=43 size 120 x 40 exits 3 spawn (1128, 504)
+ zone route_129 idx=44 size 80 x 40 exits 2 spawn (520, 440)
+ zone route_130 idx=45 size 80 x 40 exits 2 spawn (584, 264)
+ zone route_131 idx=46 size 60 x 40 exits 3 spawn (616, 344)
+ zone route_132 idx=47 size 80 x 40 exits 2 spawn (648, 328)
+ zone route_133 idx=48 size 80 x 40 exits 2 spawn (600, 264)
+ zone route_134 idx=49 size 80 x 40 exits 2 spawn (648, 328)
+ zone underwater_55 idx=55 size 40 x 80 exits 2 spawn (184, 504)
+ zone underwater_50 idx=50 size 80 x 80 exits 1 spawn (696, 600)
+ zone underwater_56 idx=56 size 80 x 40 exits 2 spawn (728, 488)
+ zone underwater idx=51 size 80 x 80 exits 3 spawn (520, 520)
+ zone underwater_52 idx=52 size 80 x 80 exits 4 spawn (648, 648)
+ zone underwater_53 idx=53 size 120 x 40 exits 2 spawn (888, 248)
+ zone underwater_54 idx=54 size 80 x 40 exits 2 spawn (664, 328)
+ zone sootopolis_city idx=7 size 60 x 60 exits 13 spawn (456, 520)
+ zone petalburg_woods idx=249 size 48 x 44 exits 6 spawn (360, 392)
+ zone rusturf_tunnel idx=242 size 36 x 24 exits 3 spawn (296, 248)
+ zone granite_cave idx=245 size 42 x 15 exits 4 spawn (344, 120)
+ zone meteor_falls idx=238 size 30 x 42 exits 6 spawn (232, 328)
+ zone fiery_path idx=252 size 35 x 38 exits 2 spawn (296, 296)
+ zone jagged_pass idx=251 size 30 x 46 exits 5 spawn (232, 360)
+ zone mt_chimney idx=231 size 13 x 12 exits 2 spawn (104, 104)
+ zone mt_pyre idx=253 size 22 x 19 exits 6 spawn (168, 152)
+ zone new_mauville idx=290 size 9 x 9 exits 2 spawn (72, 72)
+ zone safari_zone idx=407 size 40 x 40 exits 0 spawn (328, 328)
+ zone shoal_cave idx=284 size 35 x 35 exits 4 spawn (296, 264)
+ zone victory_road idx=281 size 46 x 45 exits 5 spawn (376, 360)
+ zone abandoned_ship idx=292 size 23 x 21 exits 5 spawn (168, 152)
+ zone aqua_hideout idx=261 size 28 x 30 exits 3 spawn (216, 200)
+ zone magma_hideout idx=324 size 37 x 38 exits 4 spawn (328, 344)
+ overworld zone added (atlas)
+ room room_106 size 10 x 9 exits 2
+ room room_104 size 11 x 8 exits 2
+ room room_105 size 9 x 112 exits 38
+ room room_108 size 14 x 9 exits 3
+ room room_107 size 10 x 8 exits 2
+ room room_110 size 11 x 8 exits 2
+ room room_122 size 14 x 9 exits 3
+ room room_124 size 11 x 8 exits 2
+ room room_111 size 21 x 15 exits 3
+ room room_113 size 13 x 10 exits 2
+ room room_117 size 14 x 11 exits 2
+ room room_118 size 20 x 9 exits 3
+ room room_116 size 10 x 8 exits 2
+ room room_120 size 24 x 15 exits 4
+ room room_121 size 11 x 8 exits 2
+ room room_125 size 10 x 21 exits 2
+ room room_130 size 14 x 9 exits 3
+ room room_126 size 12 x 9 exits 2
+ room room_132 size 11 x 8 exits 2
+ room room_127 size 11 x 8 exits 2
+ room room_128 size 22 x 11 exits 2
+ room room_129 size 10 x 9 exits 2
+ room room_136 size 11 x 20 exits 2
+ room room_141 size 14 x 8 exits 3
+ room room_140 size 11 x 8 exits 2
+ room room_138 size 14 x 9 exits 3
+ room room_137 size 12 x 11 exits 2
+ room room_133 size 19 x 9 exits 3
+ room room_143 size 13 x 8 exits 2
+ room room_144 size 11 x 9 exits 2
+ room room_145 size 12 x 9 exits 2
+ room room_146 size 14 x 9 exits 3
+ room room_149 size 12 x 9 exits 2
+ room room_152 size 14 x 9 exits 3
+ room room_150 size 8 x 6 exits 2
+ room room_151 size 20 x 25 exits 2
+ room room_154 size 11 x 8 exits 2
+ room room_155 size 8 x 6 exits 2
+ room room_156 size 8 x 6 exits 2
+ room room_157 size 8 x 6 exits 2
+ room room_158 size 8 x 6 exits 2
+ room room_159 size 8 x 6 exits 2
+ room room_176 size 18 x 8 exits 4
+ room room_160 size 12 x 9 exits 3
+ room room_166 size 14 x 9 exits 3
+ room room_162 size 21 x 14 exits 3
+ room room_164 size 31 x 12 exits 4
+ room room_169 size 12 x 14 exits 2
+ room room_171 size 11 x 8 exits 2
+ room room_172 size 10 x 9 exits 2
+ room room_173 size 8 x 8 exits 2
+ room room_174 size 11 x 8 exits 2
+ room room_175 size 10 x 9 exits 2
+ room room_170 size 24 x 15 exits 2
+ room room_184 size 11 x 8 exits 2
+ room room_183 size 26 x 36 exits 14
+ room room_186 size 14 x 9 exits 3
+ room room_185 size 10 x 9 exits 2
+ room room_188 size 11 x 8 exits 2
+ room room_189 size 11 x 8 exits 2
+ room room_190 size 11 x 8 exits 2
+ room room_191 size 10 x 8 exits 2
+ room room_192 size 16 x 10 exits 3
+ room room_194 size 12 x 10 exits 3
+ room room_221 size 19 x 12 exits 5
+ room room_223 size 14 x 9 exits 3
+ room room_59 size 11 x 9 exits 3
+ room room_57 size 11 x 9 exits 3
+ room room_61 size 13 x 13 exits 2
+ room room_62 size 10 x 9 exits 2
+ room room_63 size 11 x 8 exits 2
+ room room_64 size 14 x 9 exits 3
+ room room_66 size 11 x 8 exits 2
+ room room_71 size 17 x 9 exits 2
+ room room_68 size 14 x 9 exits 3
+ room room_70 size 18 x 28 exits 2
+ room room_67 size 10 x 8 exits 2
+ room room_72 size 10 x 9 exits 2
+ room room_73 size 11 x 8 exits 2
+ room room_74 size 17 x 19 exits 26
+ room room_77 size 11 x 8 exits 2
+ room room_78 size 14 x 9 exits 4
+ room room_76 size 10 x 8 exits 2
+ room room_80 size 11 x 8 exits 2
+ room room_81 size 13 x 10 exits 2
+ room room_84 size 14 x 9 exits 3
+ room room_86 size 10 x 9 exits 2
+ room room_87 size 11 x 8 exits 2
+ room room_88 size 13 x 10 exits 2
+ room room_91 size 11 x 8 exits 2
+ room room_92 size 14 x 9 exits 3
+ room room_94 size 17 x 8 exits 2
+ room room_95 size 11 x 8 exits 2
+ room room_96 size 10 x 9 exits 2
+ room room_97 size 14 x 9 exits 3
+ room room_99 size 10 x 9 exits 2
+ room room_100 size 10 x 9 exits 2
+ room room_101 size 10 x 9 exits 2
+ room room_102 size 10 x 9 exits 2
+ room room_103 size 10 x 9 exits 2
+ room room_344 size 32 x 24 exits 1
+ room room_226 size 12 x 9 exits 2
+ room room_227 size 15 x 9 exits 2
+ room room_305 size 17 x 33 exits 3
+ room room_498 size 15 x 10 exits 2
+ room room_499 size 12 x 8 exits 3
+ room room_511 size 15 x 6 exits 4
+ room room_510 size 15 x 6 exits 4
+ room room_228 size 11 x 8 exits 2
+ room room_244 size 17 x 33 exits 3
+ room room_229 size 10 x 8 exits 2
+ room room_332 size 21 x 17 exits 2
+ room room_467 size 19 x 17 exits 3
+ room room_230 size 13 x 12 exits 2
+ room room_512 size 10 x 9 exits 2
+ room room_342 size 20 x 20 exits 1
+ room room_232 size 10 x 8 exits 3
+ room room_234 size 11 x 8 exits 2
+ room room_235 size 10 x 9 exits 2
+ room room_236 size 12 x 9 exits 2
+ room room_514 size 20 x 13 exits 3
+ room room_306 size 17 x 33 exits 3
+ room room_311 size 15 x 20 exits 1
+ room room_237 size 18 x 14 exits 4
+ room room_513 size 11 x 8 exits 2
+ room room_315 size 18 x 18 exits 2
+ room room_339 size 20 x 10 exits 0
+ room room_243 size 20 x 10 exits 2
+ room room_264 size 14 x 9 exits 1
+ room room_198 size 14 x 9 exits 3
+ room room_200 size 11 x 8 exits 2
+ room room_196 size 17 x 26 exits 3
+ room room_275 size 19 x 26 exits 2
+ room room_201 size 8 x 7 exits 2
+ room room_202 size 8 x 7 exits 2
+ room room_203 size 8 x 7 exits 2
+ room room_204 size 8 x 7 exits 2
+ room room_205 size 8 x 7 exits 2
+ room room_206 size 8 x 7 exits 2
+ room room_207 size 8 x 7 exits 2
+ room room_208 size 8 x 7 exits 2
+ room room_209 size 11 x 8 exits 3
+ room room_246 size 32 x 26 exits 7
+ room room_248 size 15 x 14 exits 1
+ room room_239 size 30 x 32 exits 4
+ room room_240 size 29 x 38 exits 6
+ room room_345 size 30 x 32 exits 1
+ room room_250 size 40 x 47 exits 4
+ room room_259 size 38 x 51 exits 3
+ room room_254 size 13 x 13 exits 5
+ room room_291 size 41 x 41 exits 1
+ room room_285 size 46 x 38 exits 8
+ room room_282 size 46 x 31 exits 7
+ room room_293 size 18 x 12 exits 12
+ room room_301 size 9 x 7 exits 2
+ room room_262 size 51 x 24 exits 25
+ room room_325 size 33 x 39 exits 3
+ room room_326 size 49 x 28 exits 2
+ room room_331 size 60 x 19 exits 2
+ room room_109 size 14 x 10 exits 1
+ room room_123 size 14 x 10 exits 1
+ room room_112 size 17 x 15 exits 1
+ room room_119 size 20 x 9 exits 1
+ room room_131 size 14 x 10 exits 1
+ room room_142 size 14 x 8 exits 1
+ room room_139 size 14 x 10 exits 1
+ room room_134 size 19 x 9 exits 2
+ room room_147 size 14 x 9 exits 2
+ room room_153 size 14 x 10 exits 1
+ room room_177 size 18 x 8 exits 3
+ room room_182 size 5 x 6 exits 0
+ room room_161 size 12 x 9 exits 1
+ room room_167 size 14 x 10 exits 1
+ room room_163 size 22 x 13 exits 1
+ room room_165 size 51 x 33 exits 4
+ room room_187 size 14 x 10 exits 1
+ room room_193 size 16 x 10 exits 1
+ room room_195 size 12 x 9 exits 1
+ room room_220 size 11 x 13 exits 4
+ room room_225 size 14 x 10 exits 1
+ room room_224 size 14 x 10 exits 1
+ room room_60 size 9 x 8 exits 1
+ room room_58 size 9 x 8 exits 1
+ room room_65 size 14 x 10 exits 1
+ room room_69 size 14 x 10 exits 1
+ room room_75 size 17 x 19 exits 24
+ room room_79 size 14 x 10 exits 1
+ room room_85 size 14 x 10 exits 1
+ room room_93 size 14 x 10 exits 1
+ room room_98 size 14 x 10 exits 1
+ room room_502 size 15 x 22 exits 3
+ room room_333 size 21 x 17 exits 2
+ room room_468 size 16 x 21 exits 2
+ room room_343 size 27 x 30 exits 1
+ room room_233 size 13 x 26 exits 3
+ room room_515 size 20 x 11 exits 1
+ room room_410 size 40 x 40 exits 1
+ room room_316 size 28 x 23 exits 2
+ room room_199 size 14 x 10 exits 1
+ room room_197 size 17 x 26 exits 1
+ room room_276 size 23 x 23 exits 2
+ room room_210 size 12 x 9 exits 1
+ room room_247 size 32 x 26 exits 5
+ room room_241 size 11 x 18 exits 1
+ room room_260 size 50 x 37 exits 3
+ room room_255 size 13 x 13 exits 6
+ room room_286 size 21 x 15 exits 2
+ room room_287 size 31 x 14 exits 4
+ room room_283 size 46 x 31 exits 4
+ room room_294 size 18 x 17 exits 6
+ room room_300 size 9 x 17 exits 3
+ room room_295 size 13 x 10 exits 8
+ room room_263 size 34 x 24 exits 10
+ room room_327 size 28 x 24 exits 3
+ room room_330 size 33 x 24 exits 2
+ room room_135 size 19 x 9 exits 1
+ room room_148 size 14 x 9 exits 1
+ room room_178 size 18 x 8 exits 3
+ room room_211 size 13 x 14 exits 2
+ room room_500 size 12 x 8 exits 2
+ room room_334 size 21 x 17 exits 2
+ room room_469 size 16 x 21 exits 2
+ room room_336 size 139 x 23 exits 1
+ room room_317 size 14 x 14 exits 3
+ room room_280 size 19 x 19 exits 1
+ room room_256 size 13 x 13 exits 6
+ room room_321 size 20 x 30 exits 1
+ room room_297 size 18 x 8 exits 4
+ room room_296 size 27 x 8 exits 3
+ room room_299 size 9 x 8 exits 2
+ room room_329 size 59 x 28 exits 2
+ room room_328 size 24 x 17 exits 1
+ room room_179 size 18 x 8 exits 3
+ room room_216 size 11 x 13 exits 4
+ room room_501 size 15 x 24 exits 4
+ room room_335 size 13 x 10 exits 1
+ room room_470 size 16 x 21 exits 2
+ room room_318 size 14 x 14 exits 2
+ room room_257 size 13 x 13 exits 5
+ room room_180 size 18 x 8 exits 3
+ room room_212 size 13 x 14 exits 2
+ room room_471 size 16 x 21 exits 2
+ room room_319 size 14 x 14 exits 3
+ room room_258 size 13 x 13 exits 2
+ room room_181 size 18 x 12 exits 1
+ room room_217 size 11 x 13 exits 4
+ room room_472 size 25 x 16 exits 2
+ room room_320 size 14 x 14 exits 3
+ room room_213 size 13 x 14 exits 2
+ room room_495 size 5 x 7 exits 2
+
+Saved C:\Users\jdbpb\Downloads\pokepoke-main\pokepoke-main\tools\..\data\emerald_gba_maps.js zones: 73 rooms: 250
+Total size: 14925115 bytes

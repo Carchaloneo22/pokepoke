@@ -1,0 +1,2 @@
+@echo off
+"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --no-first-run --user-data-dir="%TEMP%\opencode\edge_profile_cmd" --virtual-time-budget=25000 --dump-dom "http://127.0.0.1:8000/_admintest.html" > "C:\Users\jdbpb\Downloads\pokepoke-main\pokepoke-main\dump.html" 2> "C:\Users\jdbpb\Downloads\pokepoke-main\pokepoke-main\edge_err.txt"

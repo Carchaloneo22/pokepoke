@@ -1,0 +1,37 @@
+# Credenciales y secretos (NUNCA subir al repositorio)
+client_secret_*.json
+*client_secret*.json
+*.apps.googleusercontent.com.json
+
+# Dependencias y entornos
+node_modules/
+**/node_modules/
+.env
+**/.env
+venv/
+.venv/
+env/
+
+# Datos locales temporales
+store.json
+**/store.json
+
+# Python y PyInstaller
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.exe
+scratch_check_tiles.py
+test_hoenn_sanity.js
+
+# Copias comprimidas de respaldo
+*.zip
+*.tar.gz
+*.rar
+
+# Archivos de autenticación sensibles o legacy
+auth (1).js
+*.db

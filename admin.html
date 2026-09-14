@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>PokéTrainer · Región Hoenn y Esmeralda</title>
+  <meta name="description" content="Simulador de combate y aventura RPG Monster-Tamer con exploración regional de Hoenn y Pokédex.">
+
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="admin.css?v=15">
+
+  <!-- Google Auth — debe cargarse antes del script principal -->
+  <script src="auth.js?v=2"></script>
+</head>
+<body>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar" aria-label="Menú lateral">
+    <div class="sidebar-header">
+      <div class="logo">
+        <div class="ball"></div>
+        <span class="logo-text">PokéTrainer</span>
+      </div>
+    </div>
+
+    <div class="sidebar-user" id="sidebarUser">
+      <div class="avatar" id="userAvatar"><i class="fas fa-user"></i></div>
+      <div class="user-info">
+        <div class="user-name" id="userNameDisplay">—</div>
+        <div class="user-role" id="userRoleDisplay">—</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-menu" id="menuContainer" aria-label="Navegación principal">
+      <!-- inyectado por admin.js -->
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="logout-btn" id="logoutBtn" aria-label="Cerrar sesión">
+        <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <div class="main-content" id="mainContent">
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </span>
+        <h3 id="viewTitle">Panel</h3>
+      </div>
+      <span class="role-badge" id="roleBadge">—</span>
+    </header>
+    <main class="page-content" id="pageContent">
+      <!-- vistas inyectadas por admin.js -->
+    </main>
+  </div>
+
+  <!-- ===== MODAL GENÉRICO ===== -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="modalContent">
+      <button class="close-modal" id="modalCloseBtn" aria-label="Cerrar modal">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Contenedor Unity WebGL de Batallas (Oculto por defecto, activado por UnityBridge) -->
+  <div id="unityContainer" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:9999; background:#000;">
+    <canvas id="unity-canvas" style="width:100%; height:100%; display:block;"></canvas>
+  </div>
+
+  <!-- ===== MODAL DE CONTEXTO DE JUGADOR (CLIC EN ENTRENADOR) ===== -->
+  <div class="modal-overlay" id="playerContextModal" style="display:none;" role="dialog" aria-modal="true">
+    <div class="modal habbo-card" style="max-width:380px; text-align:center;">
+      <button class="close-modal" onclick="LobbyManager.closePlayerContextMenu()">&times;</button>
+      <div class="context-avatar-circle"><i class="fas fa-user-ninja"></i></div>
+      <h3 id="contextPlayerName" style="margin:10px 0 4px; color:#2ecc71;">Entrenador</h3>
+      <div style="font-size:0.85rem; color:#888; margin-bottom:12px;">
+        <span id="contextPlayerState" class="badge-role">Explorando</span> · <span id="contextPlayerBadges">0 Medallas</span>
+      </div>
+      <p style="font-size:0.8rem; color:#aaa; margin-bottom:18px;">¿Qué deseas hacer con este entrenador en la Sala Unión?</p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <button class="btn btn-primary" onclick="LobbyManager.challengeSelectedPlayer()" style="background:#e74c3c; border:none; justify-content:center;">
+          <i class="fas fa-bolt"></i> ⚔️ Desafiar a Duelo en el Ring
+        </button>
+        <button class="btn btn-primary" onclick="LobbyManager.tradeWithSelectedPlayer()" style="background:#3498db; border:none; justify-content:center;">
+          <i class="fas fa-sync-alt"></i> 🔄 Solicitar Intercambio Seguro
+        </button>
+        <button class="btn btn-outline" onclick="LobbyManager.whisperToSelectedPlayer()" style="justify-content:center;">
+          <i class="fas fa-comment"></i> 💬 Enviar Mensaje Privado
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL DE INTERCAMBIO DUAL-LOCK (HABBO / GBA LINK) ===== -->
+  <div class="modal-overlay" id="tradeModalOverlay" style="display:none;" role="dialog" aria-modal="true">
+    <div class="modal trade-room-window" style="max-width:760px; width:95vw;">
+      <div class="trade-window-header">
+        <h3><i class="fas fa-satellite-dish" style="color:#2ecc71;"></i> Centro de Cambio · Cable Link Dual-Lock</h3>
+        <button class="close-modal" onclick="LobbyManager.closeTradeModal()">&times;</button>
+      </div>
+
+      <div class="trade-grid-container">
+        <!-- Columna Izquierda: Tu Oferta -->
+        <div class="trade-column my-trade-side">
+          <h4>👤 Tu Oferta</h4>
+          <div class="trade-subtext">Selecciona el Pokémon a intercambiar (con su objeto equipado):</div>
+          <div class="trade-selector-list" id="tradeMyTeamList"></div>
+
+          <div class="trade-subtext" style="margin-top:12px;">Selecciona objetos de tu mochila:</div>
+          <div class="trade-items-box" id="tradeMyItemsList"></div>
+
+          <div id="myLockStatus" class="lock-badge unlocked">🔓 Modificando Oferta</div>
+        </div>
+
+        <!-- Divisor Central con animación de intercambio -->
+        <div class="trade-center-divider">
+          <div class="cable-link-anim">
+            <div class="pokeball-stream"></div>
+          </div>
+          <span style="font-size:0.75rem; color:#aaa; font-weight:700;">CONEXIÓN SEGURA</span>
+        </div>
+
+        <!-- Columna Derecha: Oferta del Compañero -->
+        <div class="trade-column partner-trade-side">
+          <h4>👥 Oferta de <span id="tradePartnerName">Compañero</span></h4>
+          <div class="trade-subtext">Pokémon y objetos ofrecidos por tu rival:</div>
+          <div class="partner-offer-display" id="tradePartnerOfferDisplay">
+            <div class="empty-offer-prompt">Esperando selección de tu compañero...</div>
+          </div>
+          <div id="partnerLockStatus" class="lock-badge unlocked">⏳ Esperando Oferta</div>
+        </div>
+      </div>
+
+      <!-- Barra Inferior de Acción y Doble Confirmación -->
+      <div class="trade-footer-actions">
+        <button class="btn btn-outline" onclick="LobbyManager.closeTradeModal()"><i class="fas fa-times"></i> Cancelar</button>
+        <button class="btn btn-secondary" id="tradeLockBtn" onclick="LobbyManager.lockTrade()"><i class="fas fa-lock"></i> Fijar Oferta</button>
+        <button class="btn btn-primary" id="tradeConfirmBtn" onclick="LobbyManager.confirmTrade()" disabled><i class="fas fa-check-double"></i> Confirmar Intercambio Definitivo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL DE TIENDA ===== -->
+  <div class="modal-overlay" id="shopModalOverlay" style="display:none;" role="dialog" aria-modal="true">
+    <div class="modal" style="max-width:400px; padding: 20px;">
+      <div class="dialog-header" style="border-bottom:2px solid #3498db; padding-bottom:8px; margin-bottom:14px;">
+        <h3 style="margin:0; color:#3498db;"><i class="fas fa-shopping-cart"></i> Tienda Pokémon</h3>
+        <button class="close-modal" onclick="App.closeShop()">&times;</button>
+      </div>
+      <div id="shopItemsList" style="max-height: 400px; overflow-y: auto;">
+        <!-- JS renderShopItems -->
+      </div>
+      <div style="text-align:right; margin-top:12px;">
+        <button class="btn btn-outline" onclick="App.closeShop()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL DE MÁQUINAS OCULTAS (MO 01 A MO 08 - GUÍAS NINTENDO) ===== -->
+  <div class="modal-overlay" id="hmModalOverlay" style="display:none;" role="dialog" aria-modal="true">
+    <div class="modal" style="max-width:560px;">
+      <div class="dialog-header" style="border-bottom:2px solid #27ae60; padding-bottom:8px; margin-bottom:14px;">
+        <h3 style="margin:0; color:#2ecc71;"><i class="fas fa-compact-disc"></i> Máquinas Ocultas (MO) de Hoenn</h3>
+        <button class="close-modal" onclick="document.getElementById('hmModalOverlay').style.display='none'">&times;</button>
+      </div>
+      <p style="font-size:0.85rem; color:#aaa; margin-bottom:14px;">
+        Conforme a la <strong>Guía Oficial de Pokémon Esmeralda (Guías Nintendo)</strong>, cada MO requiere una medalla de gimnasio específica para poder utilizarse fuera de combate para despejar caminos y explorar.
+      </p>
+      <div class="hm-cards-grid" id="hmCardsContainer"></div>
+    </div>
+  </div>
+
+  <!-- Lógica principal -->
+  <!-- Mapas y Datos de la región Hoenn -->
+  <script src="data/wikidex_sprites.js"></script>
+  <script src="data/hoenn_maps.js"></script>
+  <script src="data/interiors_maps.js"></script>
+  <script src="data/entrenadores_esmeralda.js"></script>
+  <script src="data/items_database.js"></script>
+  <script src="modules/cuenta.js"></script>
+  <script src="modules/mapa.js"></script>
+  <script src="modules/batalla.js"></script>
+  <script src="modules/datos.js"></script>
+  <!-- MMO Interaction UI -> Movido a lobby-chat-quick-actions -->
+
+
+
+  <!-- Scripts modulares -->
+  <script src="modules/progreso.js"></script>
+  <script src="modules/game_client.js?v=18"></script>
+  <script src="modules/auth_screen.js"></script>
+  <script src="modules/unity_bridge.js"></script>
+  <script src="modules/sprites.js"></script>
+  <script src="modules/tilemap_renderer.js?v=11"></script>
+  <script src="modules/lobby_view.js"></script>
+  <script src="admin.js?v=23"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "tipos": ["Normal", "Fuego", "Agua", "Planta", "Eléctrico", "Hielo", "Lucha", "Veneno", "Tierra", "Volador", "Psíquico", "Bicho", "Roca", "Fantasma", "Dragón", "Siniestro", "Acero", "Hada"],
+  "efectividad": {
+    "Normal":   {"Roca":0.5,"Acero":0.5,"Fantasma":0},
+    "Fuego":    {"Fuego":0.5,"Agua":0.5,"Planta":2,"Roca":0.5,"Acero":2,"Bicho":2,"Hielo":2},
+    "Agua":     {"Fuego":2,"Agua":0.5,"Planta":0.5,"Tierra":2,"Roca":2,"Dragón":0.5},
+    "Planta":   {"Fuego":0.5,"Agua":2,"Planta":0.5,"Tierra":2,"Roca":2,"Volador":0.5,"Veneno":0.5},
+    "Eléctrico":{"Agua":2,"Planta":0.5,"Eléctrico":0.5,"Tierra":0,"Volador":2,"Dragón":0.5},
+    "Hielo":    {"Fuego":0.5,"Agua":0.5,"Planta":2,"Tierra":2,"Volador":2,"Dragón":2,"Acero":0.5},
+    "Lucha":    {"Normal":2,"Roca":2,"Acero":2,"Siniestro":2,"Hada":0.5,"Veneno":0.5,"Psíquico":0.5,"Volador":0.5,"Bicho":0.5,"Fantasma":0},
+    "Veneno":   {"Planta":2,"Veneno":0.5,"Tierra":0.5,"Roca":0.5,"Fantasma":0.5,"Acero":0},
+    "Tierra":   {"Fuego":2,"Eléctrico":2,"Veneno":2,"Roca":2,"Acero":2,"Planta":0.5,"Volador":0},
+    "Volador":  {"Planta":2,"Lucha":2,"Bicho":2,"Eléctrico":0.5,"Roca":0.5,"Acero":0.5},
+    "Psíquico": {"Lucha":2,"Veneno":2,"Psíquico":0.5,"Siniestro":0,"Acero":0.5},
+    "Bicho":    {"Planta":2,"Psíquico":2,"Siniestro":2,"Hada":0.5,"Fuego":0.5,"Lucha":0.5,"Volador":0.5,"Veneno":0.5,"Fantasma":0.5,"Acero":0.5},
+    "Roca":     {"Fuego":2,"Hielo":2,"Volador":2,"Bicho":2,"Lucha":0.5,"Tierra":0.5,"Acero":0.5},
+    "Fantasma": {"Psíquico":2,"Fantasma":2,"Normal":0,"Siniestro":0.5},
+    "Dragón":   {"Dragón":2,"Acero":0.5,"Hada":0},
+    "Siniestro":{"Psíquico":2,"Fantasma":2,"Siniestro":0.5,"Lucha":0.5,"Hada":0.5},
+    "Acero":    {"Hielo":2,"Roca":2,"Hada":2,"Fuego":0.5,"Agua":0.5,"Eléctrico":0.5,"Acero":0.5},
+    "Hada":     {"Lucha":2,"Dragón":2,"Siniestro":2,"Fuego":0.5,"Veneno":0.5,"Acero":0.5}
+  },
+  "formula": "((2 * nivel / 5 + 2) * poder * (ataque / defensa) / 50 + 2) * modificadorTipo * aleatorio(0.85, 1.0) * critico",
+  "critico": { "probabilidad": 0.0625, "multiplicador": 1.5 },
+  "encuentro": { "probabilidadPorPaso": 0.12 }
+}

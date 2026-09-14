@@ -1,0 +1,10 @@
+{
+  "criaturas": [
+    { "id": "brizal", "nombre": "Brizal", "tipos": ["Planta"], "nivelBase": 3, "hp": 34, "ataque": 13, "defensa": 12, "ataqueEspecial": 14, "defensaEspecial": 12, "velocidad": 15, "movimientos": ["ramita", "pulso_verde", "guardia"] },
+    { "id": "ascua", "nombre": "Ascua", "tipos": ["Fuego"], "nivelBase": 3, "hp": 31, "ataque": 15, "defensa": 10, "ataqueEspecial": 16, "defensaEspecial": 11, "velocidad": 14, "movimientos": ["mordida_calida", "chisporroteo", "guardia"] },
+    { "id": "gotin", "nombre": "Gotin", "tipos": ["Agua"], "nivelBase": 3, "hp": 36, "ataque": 11, "defensa": 13, "ataqueEspecial": 12, "defensaEspecial": 14, "velocidad": 13, "movimientos": ["chorro", "burbuja", "guardia"] },
+    { "id": "voltillo", "nombre": "Voltillo", "tipos": ["Eléctrico", "Volador"], "nivelBase": 5, "hp": 43, "ataque": 18, "defensa": 13, "ataqueEspecial": 19, "defensaEspecial": 14, "velocidad": 20, "movimientos": ["chispa_corta", "aleteo", "guardia"] },
+    { "id": "terruno", "nombre": "Terruno", "tipos": ["Tierra", "Roca"], "nivelBase": 6, "hp": 52, "ataque": 17, "defensa": 19, "ataqueEspecial": 15, "defensaEspecial": 18, "velocidad": 10, "movimientos": ["golpe_roca", "embate", "guardia"] },
+    { "id": "lumina", "nombre": "Lumina", "tipos": ["Psíquico"], "nivelBase": 8, "hp": 61, "ataque": 21, "defensa": 18, "ataqueEspecial": 22, "defensaEspecial": 19, "velocidad": 16, "movimientos": ["destello", "onda_clara", "guardia"] }
+  ]
+}
