@@ -51,26 +51,37 @@ def open_game_in_browser(url: str, delay: float = 1.2):
 
 
 def main():
-    port = find_free_port(8000)
-    game_url = f"http://127.0.0.1:{port}/admin.html"
+    # Detectar si estamos en Render (producción) o en local
+    is_render = os.environ.get("RENDER") is not None
+    port = int(os.environ.get("PORT", 8000))
+    host = "0.0.0.0" if is_render else "127.0.0.1"
+
+    if is_render:
+        game_url = f"http://127.0.0.1:{port}/admin.html"
+    else:
+        # En local, buscar puerto libre
+        port = find_free_port(8000)
+        game_url = f"http://127.0.0.1:{port}/admin.html"
 
     print("=" * 70)
     print("   MONSTER-TAMER & POKEDEX ADVENTURE - EJECUTABLE UNIFICADO")
     print("=" * 70)
     print(f" * Directorio Base de Recursos : {BASE_DIR}")
-    print(f" * Servidor Backend Activo     : http://127.0.0.1:{port}")
+    print(f" * Servidor Backend Activo     : http://{host}:{port}")
     print(f" * Interfaz Web Principal      : {game_url}")
-    print(f" * Documentación API Swagger   : http://127.0.0.1:{port}/docs")
+    print(f" * Documentación API Swagger   : http://{host}:{port}/docs")
+    print(f" * Modo                       : {'Render (Producción)' if is_render else 'Local'}")
     print("=" * 70)
     print(" Presiona CTRL + C en esta ventana para cerrar el juego y el servidor.")
     print("=" * 70)
 
-    # Iniciar hilo para abrir el navegador
-    browser_thread = threading.Thread(target=open_game_in_browser, args=(game_url,), daemon=True)
-    browser_thread.start()
+    # Solo abrir navegador en local, no en Render
+    if not is_render:
+        browser_thread = threading.Thread(target=open_game_in_browser, args=(game_url,), daemon=True)
+        browser_thread.start()
 
-    # Iniciar servidor Uvicorn en el hilo principal
-    uvicorn.run(app, host="127.0.0.1", port=port, log_level="warning")
+    # Iniciar servidor Uvicorn
+    uvicorn.run(app, host=host, port=port, log_level="warning")
 
 
 if __name__ == "__main__":
